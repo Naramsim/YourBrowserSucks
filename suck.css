@@ -1,0 +1,100 @@
+body{
+	background: #ffcd07;
+	height: 100%;
+	width: 100%;
+	color: #000;
+	margin: 0;
+	padding: 0;
+	font-family: "Poiret One", "Lucida Sans Unicode", "Lucida Grande", cursive;
+	font-size: 40px;
+}
+
+.content{
+	width:800px;
+    margin: 0 auto;
+    margin-top: 200px;
+    width: 95%;
+    max-width: 800px;
+}
+
+span {
+	font-size: 70px;
+	font-weight: 800;
+	letter-spacing: 14px;
+}
+
+.bbrowser {
+	margin-top: 50px;
+	font-size: 30px;
+}
+
+.browsers {
+	padding-top: 20px;
+}
+
+.suck {
+	
+}
+
+.browsers a {
+	height: auto;
+	width: 25%;
+	float: left;
+	cursor: pointer;
+}
+
+.shit {
+	background-image: url("http://files.gamebanana.com/img/ico/sprays/shit_metal-slug.gif");
+	background-repeat: no-repeat;
+	height: 300px;
+	width: 300px;
+	float: right;
+	margin-right: 30px;
+}
+
+.bimg {
+	background-repeat: no-repeat;
+	background-size: 130px;
+	height: 78px;
+	width: 200px;
+	border-bottom: 2px solid black;
+	zoom: 1;
+}
+
+.line{
+	zoom: 1;
+	height: 1px;
+	background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(147,147,147,1) 50%,rgba(0,0,0,0) 100%);
+}
+
+.chrome {
+	background-image: url("http://i.imgur.com/35o6xAy.png");
+}
+
+.ie {
+	background-image: url("http://i.imgur.com/Ai4EeAx.png");
+}
+
+.ff {
+	background-image: url("http://i.imgur.com/Z8rKKNS.png");
+}
+
+.safari {
+	background-image: url("http://i.imgur.com/9fW4sIN.png");
+}
+
+.mobile {
+	display: none;
+}
+
+@media only screen and (max-device-width: 480px){
+	.content {
+		margin-top: 0;
+	}
+	.desktop {
+		display: none;
+	}
+	.mobile {
+		display: block;
+	}
+}
