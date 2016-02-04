@@ -61,9 +61,9 @@ function test(e) {
 		results.assigments = true; ++pass;
 	}catch(error){/*console.log(e);*/}
 
-	// console.log(pass);
-	// console.log(results);
-	if(pass <= 11) {
+	 console.log(pass);
+	 console.log(results);
+	if(pass <= 10) {
 		addHtml(e, htmlToInject);
 		addStyle(cssToInject);
 		addStore();
