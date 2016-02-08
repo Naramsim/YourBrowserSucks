@@ -13,11 +13,17 @@ var isChromium = window.chrome,
     pass = 0,
     chromeStoreAndroid = "https://play.google.com/store/apps/details?id=com.android.chrome",
     chromeStoreIOS = "https://itunes.apple.com/it/app/chrome-browser-web-di-google/id535886823?mt=8",
-    chromeStoreWindows = "https://www.microsoft.com/en-us/store/apps/google/9wzdncrfhx3w";
+    chromeStoreWindows = "https://www.microsoft.com/en-us/store/apps/google/9wzdncrfhx3w",
+    messages = ["sucks", "is ancient", "was Abramo's favourite", "mega-slow"];
 
 function addHtml(selector, html) {
 	selector.innerHTML = "";
 	selector.innerHTML = htmlToInject;
+}
+
+function addMessage(selector) {
+	console.log(selector)
+	document.getElementById("message").innerHTML = messages[Math.floor(Math.random()*messages.length)];;
 }
 
 function addStyle(style) {
@@ -63,8 +69,9 @@ function test(e) {
 
 	 console.log(pass);
 	 console.log(results);
-	if(pass <= 10) {
+	if(pass <= 15) {
 		addHtml(e, htmlToInject);
+		addMessage(e)
 		addStyle(cssToInject);
 		addStore();
 	}
