@@ -1,5 +1,4 @@
 body{
-	background: #ffcd07;
 	height: 100%;
 	width: 100%;
 	color: #000;
@@ -18,7 +17,7 @@ body{
 }
 
 span {
-	font-size: 70px;
+	font-size: 60%;
 	font-weight: 800;
 	letter-spacing: 14px;
 }

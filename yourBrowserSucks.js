@@ -14,25 +14,28 @@ var isChromium = window.chrome,
     chromeStoreAndroid = "https://play.google.com/store/apps/details?id=com.android.chrome",
     chromeStoreIOS = "https://itunes.apple.com/it/app/chrome-browser-web-di-google/id535886823?mt=8",
     chromeStoreWindows = "https://www.microsoft.com/en-us/store/apps/google/9wzdncrfhx3w",
-    messages = ["sucks", "is ancient", "was Abramo's favourite", "mega-slow"];
+    messages = ["sucks", "is ancient", "was Abramo's favourite", "mega-slow", "was cool in 1993", "is seasoned", "has a long greyberd",
+    			"has more years than a Baobab", "was used by my granpa", "mentally ill", "fought Phoenician wars", "thinks 1+1=11"],
+    colors = ["#ffcd07", "#07FF26", "#FF079C", "#2E3325", "#40DAB6", "#BDFF1E", "D8D8D8"];
 
-function addHtml(selector, html) {
+this.addHtml = function(selector, html) {
 	selector.innerHTML = "";
 	selector.innerHTML = htmlToInject;
 }
 
-function addMessage(selector) {
+this.addMessage = function(selector) {
 	console.log(selector)
-	document.getElementById("message").innerHTML = messages[Math.floor(Math.random()*messages.length)];;
+	document.getElementById("message").innerHTML = messages[Math.floor(Math.random()*messages.length)] + "!";
 }
 
-function addStyle(style) {
+this.addStyle = function(style) {
     var htmlDiv = document.createElement('div');
 	htmlDiv.innerHTML = '<p style="font-size:0;">foo</p><style>' + style + '</style>';
+	document.body.style.background = colors[Math.floor(Math.random()*colors.length)];
 	document.getElementsByTagName('body')[0].appendChild(htmlDiv);
 }
 
-function addStore() {
+this.addStore = function() {
 	if(isIos) {
 		document.getElementsByClassName("store")[0].href = chromeStoreIOS;
 	}
@@ -44,7 +47,7 @@ function addStore() {
 	}
 }
 
-function test(e) {
+this.test = function(e) {
 	if( e.style.transform !== undefined) { results.transformation = true; ++pass; }
 	if( e.style.borderImage !== undefined) { results.borderImage = true; ++pass; }
 	if( e.style.counterReset !== undefined) { results.counter = true; ++pass; }
@@ -69,7 +72,7 @@ function test(e) {
 
 	 console.log(pass);
 	 console.log(results);
-	if(pass <= 15) {
+	if(pass <= 10) {
 		addHtml(e, htmlToInject);
 		addMessage(e)
 		addStyle(cssToInject);
