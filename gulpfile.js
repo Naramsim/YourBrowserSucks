@@ -12,7 +12,8 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     inject = require('gulp-inject-string'),
     uglify = require('gulp-uglify'),
-    fs = require('fs');
+    fs = require('fs'),
+    classPrefix = require('gulp-class-prefix');
  
 var minifyHTML = require('gulp-minify-html');
 var cssnano = require('gulp-cssnano');
@@ -24,6 +25,7 @@ gulp.task('minify-html', function() {
 
 gulp.task('minify-css', function() {
     return gulp.src('suck.css')
+        .pipe(classPrefix('suckContainer .', { ignored: ['body', '.suckContainer'] }))
         .pipe(cssnano())
         .pipe(gulp.dest('min'));
 });

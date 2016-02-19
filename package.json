@@ -4,6 +4,7 @@
   "description": "gracefully informs about browser's obsolescence",
   "main": "gulpfile.js",
   "scripts": {
+    "min": "gulp go",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,6 +25,7 @@
   "homepage": "https://github.com/Naramsim/YourBrowserSucks#readme",
   "devDependencies": {
     "gulp": "^3.9.0",
+    "gulp-class-prefix": "^1.0.1",
     "gulp-cssnano": "^2.1.0",
     "gulp-inject-string": "^1.1.0",
     "gulp-minify-html": "^1.0.5",

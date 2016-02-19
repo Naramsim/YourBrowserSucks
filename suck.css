@@ -8,10 +8,21 @@ body{
 	font-size: 40px;
 }
 
-.content{
+.suckContainer {
+	display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.suckCell{
+	display: table-cell;
+    vertical-align: middle;
+}
+
+.suckContent {
 	width:800px;
     margin: 0 auto;
-    margin-top: 200px;
     width: 95%;
     max-width: 800px;
 }
@@ -22,7 +33,7 @@ span {
 	letter-spacing: 14px;
 }
 
-.bbrowser {
+.hint {
 	margin-top: 50px;
 	font-size: 30px;
 }
@@ -37,7 +48,6 @@ span {
 
 .browsers a {
 	height: auto;
-	width: 25%;
 	float: left;
 	cursor: pointer;
 }
