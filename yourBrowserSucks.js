@@ -11,7 +11,7 @@ var yourBrowserSucks = yourBrowserSucks || (function(){
 	    results = {},
 	    htmlToInject='',
 	    cssToInject='',
-	    threshold = threshold || 15,
+	    threshold = threshold || 11,
 	    pass = 0,
 	    chromeStoreAndroid = "https://play.google.com/store/apps/details?id=com.android.chrome",
 	    chromeStoreIOS = "https://itunes.apple.com/it/app/chrome-browser-web-di-google/id535886823?mt=8",
